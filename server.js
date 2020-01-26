@@ -31,6 +31,7 @@ app.use('/',express.static(path.join(__dirname,'frontend')))
 // make a connection with the user from server side
 io.on('connection',(socket)=>{
     console.log("New socket formed from " + socket.id)
+    //when server get connected we use the following command
     socket.emit('connected')
 
     // make connection with server from user side 
